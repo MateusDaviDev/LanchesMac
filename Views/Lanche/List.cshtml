@@ -1,21 +1,14 @@
-﻿@model LancheListViewModel;
+﻿@model LancheListViewModel
 
 <div>
     <h2>@Model.CategoriaAtual</h2>
-
-    <p>Total de lanches: @ViewBag.Total</p>
-
 </div>
 
 <div class="container">
-<div class="row">
-    @foreach(var lanche in Model.Lanches)
-{
-    <partial name="_LanchesResumo" for="@lanche"/>
-}
+    <div class="row">
+        @foreach (var lanche in Model.Lanches)
+        {
+            <partial name="_LanchesResumo" for="@lanche" />
+        }
     </div>
 </div>
-
-
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
